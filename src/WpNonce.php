@@ -1,6 +1,6 @@
 <?php
 
-namespace OoWordpressNonces\src;
+namespace JosepCrespo\OoWordpressNonces;
 
 /**
  * A class to work with nonces in WordPress.

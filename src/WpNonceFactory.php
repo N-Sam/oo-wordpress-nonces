@@ -1,6 +1,6 @@
 <?php
 
-namespace OoWordpressNonces\src;
+namespace JosepCrespo\OoWordpressNonces;
 
 /**
  * One of the most commonly used design patterns is the factory pattern.
