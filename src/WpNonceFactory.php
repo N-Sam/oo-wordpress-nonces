@@ -23,16 +23,16 @@ class WpNonceFactory {
      */
     private const DEFAULT_WP_NONCE_NAME = '_wpnonce';
 
-	/**
-	 * Creates and returns a new WpNonce instance.
-	 *
-	 * @param  int|string $action 	-1|Scalar value to add context to the nonce.
-	 * @return WpNonce
-	 */
-	public static function create(
+    /**
+     * Creates and returns a new WpNonce instance.
+     *
+     * @param  int|string $action   -1|Scalar value to add context to the nonce.
+     * @return WpNonce
+     */
+    public static function create(
         $action    = $this->DEFAULT_WP_ACTION,
         $nonceName = $this->DEFAULT_WP_NONCE_NAME
     ) {
-		return new WpNonce($action, $nonceName);
-	}
+        return new WpNonce($action, $nonceName);
+    }
 }
