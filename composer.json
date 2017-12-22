@@ -1,6 +1,12 @@
 {
-	"name": "josepcrespo/oo-wordpress-nonces",
+    "name": "josepcrespo/oo-wordpress-nonces",
     "require-dev": {
         "phpunit/phpunit": "^6.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "JosepCrespo\\OoWordpressNonces\\": "src/",
+            "": "src/"
+        }
     }
 }
