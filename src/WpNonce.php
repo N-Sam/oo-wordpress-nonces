@@ -1,6 +1,6 @@
 <?php
 
-namespace OopWordPressNonces\src;
+namespace OoWordpressNonces\src;
 
 /**
  * A class to work with nonces in WordPress.
