@@ -1,0 +1,3 @@
+# Third party code needed to run the project,
+# installed and managed by Composer
+vendor/
