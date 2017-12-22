@@ -1,4 +1,5 @@
 {
+	"name": "josepcrespo/oo-wordpress-nonces",
     "require-dev": {
         "phpunit/phpunit": "^6.5"
     }
