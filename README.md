@@ -4,7 +4,14 @@
 
 Table of contents:
 
-[TOC]
+- [OoWordpressNonces](#oowordpressnonces)
+  * [Introduction](#introduction)
+  * [Composer Package](#composer-package)
+  * [Local development](#local-development)
+    + [Get a copy of the project](#get-a-copy-of-the-project)
+    + [Install Composer](#install-composer)
+    + [Install the dependencies](#install-the-dependencies)
+    + [Run the Tests](#run-the-tests)
 
 ----------
 
