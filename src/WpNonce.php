@@ -25,9 +25,9 @@ class WpNonce {
     private const SIGNUP_NONCE_FIELDS = 'signup_nonce_fields';
 
     /**
-     * The original WordPress nonce `ays` function name.
+     * The original WordPress nonce `create` function name.
      *
-     * @var string WP_NONCE_AYS_FUNCTION_NAME
+     * @var string WP_CREATE_NONCE_FUNCTION_NAME
      */
     private const WP_CREATE_NONCE_FUNCTION_NAME = 'wp_create_nonce';
 
@@ -115,12 +115,39 @@ class WpNonce {
     public function __construct($action, $nonceName) {
         $this->action    = $action;
         $this->nonceName = $nonceName;
-        if (function_exists($this->WP_CREATE_NONCE_FUNCTION_NAME)) {
+        if (function_exists(self::WP_CREATE_NONCE_FUNCTION_NAME)) {
             $this->token  = call_user_func(
-                $this->WP_CREATE_NONCE_FUNCTION_NAME,
+                self::WP_CREATE_NONCE_FUNCTION_NAME,
                 $action
             );
         }
+    }
+
+    /**
+     * Getter for the private $action property.
+     *
+     * @return string
+     */
+    public function getAction() {
+        return $this->action;
+    }
+
+    /**
+     * Getter for the private $nonceName property.
+     *
+     * @return string
+     */
+    public function getNonceName() {
+        return $this->nonceName;
+    }
+
+    /**
+     * Getter for the private $token property.
+     *
+     * @return string
+     */
+    public function getToken() {
+        return $this->token;
     }
 
     /**
@@ -182,7 +209,9 @@ class WpNonce {
      * @return bool|void
      */
     public static function explain($action) {
+        // @codeCoverageIgnoreStart
         return self::ays($action);
+        // @codeCoverageIgnoreEnd
     }
 
     /**
@@ -198,8 +227,8 @@ class WpNonce {
      * @return bool|string $result   false|Nonce field HTML markup.
      */
     public function field(
-        $action  = $this->action, 
-        $name    = $this->DEFAULT_WP_NONCE_NAME,
+        $action  = -1,
+        $name    = '_wpnonce',
         $referer = true,
         $echo    = true
     ) {
@@ -233,7 +262,10 @@ class WpNonce {
         ) {
             $result = false;
         } else {
-            $result = call_user_func(self::WP_REFRESH_POST_NONCES_FUNCTION_NAME);
+            $result = call_user_func(
+                self::WP_REFRESH_POST_NONCES_FUNCTION_NAME,
+                $response, $data, $screenId
+            );
         }
 
         return $result;
@@ -306,8 +338,8 @@ class WpNonce {
      */
     public function url(
         $actionurl,
-        $action     = $this->action,
-        $name       = $this->DEFAULT_WP_NONCE_NAME
+        $action     = -1,
+        $name       = '_wpnonce'
     ) {
         if (function_exists(self::WP_NONCE_URL_FUNCTION_NAME) === false) {
             $result = false;
@@ -333,7 +365,7 @@ class WpNonce {
      * @see https://codex.wordpress.org/Function_Reference/wp_verify_nonce
      *
      * @param  string     $token     The nonce token to verify.
-     * @param  int|string $action    -1|The nonce token to verify.
+     * @param  int|string $action    -1|The nonce action.
      * @return int|bool              1 if the nonce is valid and generated 
      *                                between 0-12 hours ago.
      *                               2 if the nonce is valid and generated
