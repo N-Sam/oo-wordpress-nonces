@@ -23,11 +23,7 @@ Table of contents:
 
 It does not replaces the original [WordPress Nonces](https://codex.wordpress.org/WordPress_Nonces) system, this package is only a wrapper, using an *OOP* approach, to the original *WordPress Nonces* functions.
 
-The code is simple, self explanatory and, it is fully documented. On the code source, each class method has a link to the original WordPress function it wraps. For more details you can view the official *WordPress* documentation for *Nonces*:
-
-https://codex.wordpress.org/WordPress_Nonces
-
-https://developer.wordpress.org/?s=nonce
+The code is simple, self explanatory and, it is fully documented. On the code source, each class method has a link to the original WordPress function it wraps. For more details you can view the [official WordPress documentation for Nonces](https://developer.wordpress.org/?s=nonce)
 
 ----------
 
