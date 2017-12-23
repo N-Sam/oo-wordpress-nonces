@@ -8,9 +8,9 @@ Table of contents:
 
 ----------
 
-#OoWordpressNonces
+# OoWordpressNonces
 
-##Introduction
+## Introduction
 
 **OoWordpressNonces** is a [Composer](https://getcomposer.org/) package for [WordPress](https://wordpress.org/) to deal with *WordPress Nonces* using an *Object Oriented Programming* approach.
 
@@ -24,7 +24,7 @@ https://developer.wordpress.org/?s=nonce
 
 ----------
 
-##Composer Package
+## Composer Package
 
 You can install **OoWordpressNonces** by adding this package repository specification to your project's `composer.json` file:
 <pre><code class="language-javascript">{
@@ -43,20 +43,20 @@ and then run `composer.phar update`.
 
 ----------
 
-##Local development
+## Local development
 
 In this section, you can get the instructions to setup this project on your local machine for development and testing purposes.
 
 ----------
 
-###Get a copy of the project
+### Get a copy of the project
 
 Clone the project using [Git](https://git-scm.com/):
 `git clone https://github.com/josepcrespo/oo-wordpress-nonces.git`
 or, download a [ZIP](https://en.wikipedia.org/wiki/Zip_%28file_format%29) file with all the project files:
 https://github.com/josepcrespo/oo-wordpress-nonces/archive/master.zip
 
-###Install Composer
+### Install Composer
 
 > **:exclamation: Before starting to install Composer:**
 > - [PHP](http://www.php.net/) installed on your system is a mandatory requirement. If your development environment runs on [macOS](https://www.apple.com/macos/), I recommend install it using [Homebrew](https://brew.sh/)
@@ -68,7 +68,7 @@ To quickly install *Composer* in the current directory, please, refer to the [of
 
 ----------
 
-###Install the dependencies
+### Install the dependencies
 
 To install the defined dependencies for your project, just run the *Composer* install command into the project root directory using the *Terminal.app* (if you are using *macOS*) or with your preferred *Shell*:
 
@@ -82,7 +82,7 @@ You may want to look into [the official Composer guidelines for Installing Depen
 
 ----------
 
-###Run the Tests
+### Run the Tests
 
 The *Unitary Tests* of this package has been made using [PHPUnit](https://phpunit.de/).
 
