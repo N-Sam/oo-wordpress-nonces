@@ -1,92 +1,105 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1514036817">
-  <project timestamp="1514036817">
+<coverage generated="1515516795">
+  <project timestamp="1515516795">
     <package name="JosepCrespo\OoWordpressNonces">
       <file name="/Users/josep/Desarrollo/OoWordpressNonces/src/WpNonce.php">
         <class name="JosepCrespo\OoWordpressNonces\WpNonce" namespace="JosepCrespo\OoWordpressNonces">
-          <metrics complexity="24" methods="13" coveredmethods="13" conditionals="0" coveredconditionals="0" statements="57" coveredstatements="57" elements="70" coveredelements="70"/>
+          <metrics complexity="34" methods="15" coveredmethods="15" conditionals="0" coveredconditionals="0" statements="68" coveredstatements="68" elements="83" coveredelements="83"/>
         </class>
-        <line num="115" type="method" name="__construct" visibility="public" complexity="2" crap="2" count="7"/>
-        <line num="116" type="stmt" count="7"/>
-        <line num="117" type="stmt" count="7"/>
-        <line num="118" type="stmt" count="7"/>
-        <line num="119" type="stmt" count="6"/>
-        <line num="120" type="stmt" count="6"/>
-        <line num="121" type="stmt" count="6"/>
-        <line num="124" type="stmt" count="7"/>
-        <line num="131" type="method" name="getAction" visibility="public" complexity="1" crap="1" count="2"/>
-        <line num="132" type="stmt" count="2"/>
-        <line num="140" type="method" name="getNonceName" visibility="public" complexity="1" crap="1" count="2"/>
-        <line num="141" type="stmt" count="2"/>
+        <line num="115" type="method" name="__construct" visibility="public" complexity="2" crap="2" count="8"/>
+        <line num="116" type="stmt" count="8"/>
+        <line num="117" type="stmt" count="8"/>
+        <line num="118" type="stmt" count="8"/>
+        <line num="119" type="stmt" count="7"/>
+        <line num="120" type="stmt" count="7"/>
+        <line num="121" type="stmt" count="7"/>
+        <line num="124" type="stmt" count="8"/>
+        <line num="131" type="method" name="getAction" visibility="public" complexity="1" crap="1" count="5"/>
+        <line num="132" type="stmt" count="5"/>
+        <line num="140" type="method" name="getName" visibility="public" complexity="1" crap="1" count="4"/>
+        <line num="141" type="stmt" count="4"/>
         <line num="149" type="method" name="getToken" visibility="public" complexity="1" crap="1" count="2"/>
         <line num="150" type="stmt" count="2"/>
-        <line num="168" type="method" name="ays" visibility="public" complexity="2" crap="2" count="1"/>
-        <line num="169" type="stmt" count="1"/>
-        <line num="170" type="stmt" count="1"/>
-        <line num="173" type="stmt" count="1"/>
-        <line num="174" type="stmt" count="1"/>
-        <line num="186" type="method" name="commentFormUnfilteredHtml" visibility="public" complexity="2" crap="2" count="1"/>
-        <line num="188" type="stmt" count="1"/>
-        <line num="189" type="stmt" count="1"/>
-        <line num="190" type="stmt" count="1"/>
+        <line num="158" type="method" name="setAction" visibility="private" complexity="3" crap="3" count="8"/>
+        <line num="159" type="stmt" count="8"/>
+        <line num="160" type="stmt" count="8"/>
+        <line num="162" type="stmt" count="8"/>
+        <line num="169" type="method" name="setName" visibility="private" complexity="2" crap="2" count="8"/>
+        <line num="170" type="stmt" count="8"/>
+        <line num="171" type="stmt" count="8"/>
+        <line num="173" type="stmt" count="8"/>
+        <line num="191" type="method" name="ays" visibility="public" complexity="2" crap="2" count="1"/>
         <line num="192" type="stmt" count="1"/>
-        <line num="194" type="stmt" count="1"/>
+        <line num="193" type="stmt" count="1"/>
         <line num="195" type="stmt" count="1"/>
-        <line num="198" type="stmt" count="1"/>
-        <line num="229" type="method" name="field" visibility="public" complexity="2" crap="2" count="1"/>
-        <line num="235" type="stmt" count="1"/>
-        <line num="236" type="stmt" count="1"/>
-        <line num="238" type="stmt" count="1"/>
-        <line num="239" type="stmt" count="1"/>
-        <line num="240" type="stmt" count="1"/>
-        <line num="244" type="stmt" count="1"/>
-        <line num="257" type="method" name="refreshPostNonces" visibility="public" complexity="2" crap="2" count="1"/>
-        <line num="259" type="stmt" count="1"/>
-        <line num="260" type="stmt" count="1"/>
+        <line num="196" type="stmt" count="1"/>
+        <line num="208" type="method" name="commentFormUnfilteredHtml" visibility="public" complexity="2" crap="2" count="1"/>
+        <line num="210" type="stmt" count="1"/>
+        <line num="211" type="stmt" count="1"/>
+        <line num="212" type="stmt" count="1"/>
+        <line num="214" type="stmt" count="1"/>
+        <line num="216" type="stmt" count="1"/>
+        <line num="217" type="stmt" count="1"/>
+        <line num="220" type="stmt" count="1"/>
+        <line num="255" type="method" name="field" visibility="public" complexity="4" crap="4" count="1"/>
         <line num="261" type="stmt" count="1"/>
-        <line num="263" type="stmt" count="1"/>
+        <line num="262" type="stmt" count="1"/>
+        <line num="264" type="stmt" count="1"/>
         <line num="265" type="stmt" count="1"/>
         <line num="266" type="stmt" count="1"/>
         <line num="267" type="stmt" count="1"/>
-        <line num="271" type="stmt" count="1"/>
-        <line num="282" type="method" name="signupNonceCheck" visibility="public" complexity="2" crap="2" count="1"/>
-        <line num="283" type="stmt" count="1"/>
-        <line num="284" type="stmt" count="1"/>
-        <line num="286" type="stmt" count="1"/>
+        <line num="268" type="stmt" count="1"/>
+        <line num="272" type="stmt" count="1"/>
+        <line num="286" type="method" name="refreshPostNonces" visibility="public" complexity="2" crap="2" count="1"/>
+        <line num="288" type="stmt" count="1"/>
         <line num="289" type="stmt" count="1"/>
-        <line num="299" type="method" name="signupNonceFields" visibility="public" complexity="2" crap="2" count="1"/>
+        <line num="290" type="stmt" count="1"/>
+        <line num="292" type="stmt" count="1"/>
+        <line num="294" type="stmt" count="1"/>
+        <line num="295" type="stmt" count="1"/>
+        <line num="296" type="stmt" count="1"/>
         <line num="300" type="stmt" count="1"/>
-        <line num="301" type="stmt" count="1"/>
-        <line num="303" type="stmt" count="1"/>
-        <line num="305" type="stmt" count="1"/>
-        <line num="318" type="method" name="tick" visibility="public" complexity="2" crap="2" count="1"/>
+        <line num="312" type="method" name="signupNonceCheck" visibility="public" complexity="2" crap="2" count="1"/>
+        <line num="313" type="stmt" count="1"/>
+        <line num="314" type="stmt" count="1"/>
+        <line num="316" type="stmt" count="1"/>
         <line num="319" type="stmt" count="1"/>
-        <line num="320" type="stmt" count="1"/>
-        <line num="322" type="stmt" count="1"/>
-        <line num="325" type="stmt" count="1"/>
-        <line num="339" type="method" name="url" visibility="public" complexity="2" crap="2" count="1"/>
-        <line num="344" type="stmt" count="1"/>
-        <line num="345" type="stmt" count="1"/>
-        <line num="347" type="stmt" count="1"/>
-        <line num="348" type="stmt" count="1"/>
+        <line num="329" type="method" name="signupNonceFields" visibility="public" complexity="2" crap="2" count="1"/>
+        <line num="330" type="stmt" count="1"/>
+        <line num="331" type="stmt" count="1"/>
+        <line num="333" type="stmt" count="1"/>
+        <line num="335" type="stmt" count="1"/>
+        <line num="348" type="method" name="tick" visibility="public" complexity="2" crap="2" count="1"/>
+        <line num="349" type="stmt" count="1"/>
+        <line num="350" type="stmt" count="1"/>
         <line num="352" type="stmt" count="1"/>
-        <line num="375" type="method" name="verify" visibility="public" complexity="2" crap="2" count="1"/>
+        <line num="355" type="stmt" count="1"/>
+        <line num="370" type="method" name="url" visibility="public" complexity="4" crap="4" count="1"/>
+        <line num="375" type="stmt" count="1"/>
         <line num="376" type="stmt" count="1"/>
-        <line num="377" type="stmt" count="1"/>
+        <line num="378" type="stmt" count="1"/>
         <line num="379" type="stmt" count="1"/>
         <line num="380" type="stmt" count="1"/>
-        <line num="384" type="stmt" count="1"/>
-        <metrics loc="385" ncloc="169" classes="1" methods="13" coveredmethods="13" conditionals="0" coveredconditionals="0" statements="57" coveredstatements="57" elements="70" coveredelements="70"/>
+        <line num="381" type="stmt" count="1"/>
+        <line num="385" type="stmt" count="1"/>
+        <line num="409" type="method" name="verify" visibility="public" complexity="3" crap="3" count="1"/>
+        <line num="413" type="stmt" count="1"/>
+        <line num="414" type="stmt" count="1"/>
+        <line num="416" type="stmt" count="1"/>
+        <line num="417" type="stmt" count="1"/>
+        <line num="418" type="stmt" count="1"/>
+        <line num="422" type="stmt" count="1"/>
+        <metrics loc="423" ncloc="186" classes="1" methods="15" coveredmethods="15" conditionals="0" coveredconditionals="0" statements="68" coveredstatements="68" elements="83" coveredelements="83"/>
       </file>
       <file name="/Users/josep/Desarrollo/OoWordpressNonces/src/WpNonceFactory.php">
         <class name="JosepCrespo\OoWordpressNonces\WpNonceFactory" namespace="JosepCrespo\OoWordpressNonces">
           <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
         </class>
-        <line num="32" type="method" name="create" visibility="public" complexity="1" crap="1" count="7"/>
-        <line num="36" type="stmt" count="7"/>
+        <line num="32" type="method" name="create" visibility="public" complexity="1" crap="1" count="8"/>
+        <line num="36" type="stmt" count="8"/>
         <metrics loc="37" ncloc="15" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
       </file>
     </package>
-    <metrics files="2" loc="422" ncloc="184" classes="2" methods="14" coveredmethods="14" conditionals="0" coveredconditionals="0" statements="58" coveredstatements="58" elements="72" coveredelements="72"/>
+    <metrics files="2" loc="460" ncloc="201" classes="2" methods="16" coveredmethods="16" conditionals="0" coveredconditionals="0" statements="69" coveredstatements="69" elements="85" coveredelements="85"/>
   </project>
 </coverage>
