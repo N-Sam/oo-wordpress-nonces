@@ -11,7 +11,7 @@ use JosepCrespo\OoWordpressNonces\WpNonce;
  */
 class WpNonceTest extends TestCase {
     /**
-     * Tests the WpNonce::ays method.
+     * Tests the WpNonce ays method.
      *
      * @covers JosepCrespo\OoWordpressNonces\WpNonce::ays
      * @return void
@@ -27,7 +27,7 @@ class WpNonceTest extends TestCase {
     }
 
     /**
-     * Tests the WpNonce::commentFormUnfilteredHtml method.
+     * Tests the WpNonce commentFormUnfilteredHtml method.
      *
      * @covers JosepCrespo\OoWordpressNonces\WpNonce::commentFormUnfilteredHtml
      * @return void
@@ -41,14 +41,19 @@ class WpNonceTest extends TestCase {
     }
 
     /**
-     * Tests the WpNonce::field method.
+     * Tests the WpNonce field method.
      *
      * @covers JosepCrespo\OoWordpressNonces\WpNonce::__construct
      * @covers JosepCrespo\OoWordpressNonces\WpNonceFactory::create
      * @covers JosepCrespo\OoWordpressNonces\WpNonce::field
+     * @covers JosepCrespo\OoWordpressNonces\WpNonce::getAction
+     * @covers JosepCrespo\OoWordpressNonces\WpNonce::getName
+     * @covers JosepCrespo\OoWordpressNonces\WpNonce::setAction
+     * @covers JosepCrespo\OoWordpressNonces\WpNonce::setName
      * @return void
      */
     public function testField() {
+        $wpNonceField   = '<html>field</html>';
         $wpNonceFactory = new WpNonceFactory();
         MonkeyFunctions\expect('wp_create_nonce')->once();
         $wpNonce = $wpNonceFactory->create();
@@ -56,17 +61,19 @@ class WpNonceTest extends TestCase {
         $this->assertFalse($result);
         MonkeyFunctions\expect('wp_nonce_field')
             ->once()
-            ->andReturn('<html>field</html>');
+            ->andReturn($wpNonceField);
         $result = $wpNonce->field();
-        $this->assertEquals('<html>field</html>', $result);
+        $this->assertEquals($wpNonceField, $result);
     }
 
     /**
-     * Tests the WpNonce::refreshPostNonces method.
+     * Tests the WpNonce refreshPostNonces method.
      *
      * @covers JosepCrespo\OoWordpressNonces\WpNonce::__construct
      * @covers JosepCrespo\OoWordpressNonces\WpNonceFactory::create
      * @covers JosepCrespo\OoWordpressNonces\WpNonce::refreshPostNonces
+     * @covers JosepCrespo\OoWordpressNonces\WpNonce::setAction
+     * @covers JosepCrespo\OoWordpressNonces\WpNonce::setName
      * @return void
      */
     public function testRefreshPostNonces() {
@@ -76,22 +83,28 @@ class WpNonceTest extends TestCase {
         $wpNonceFactory = new WpNonceFactory();
         MonkeyFunctions\expect('wp_create_nonce')->once();
         $wpNonce = $wpNonceFactory->create();
-        $result  = $wpNonce->refreshPostNonces($customResponse, $customData, $customScreenId);
+        $result  = $wpNonce->refreshPostNonces(
+            $customResponse, $customData, $customScreenId
+        );
         $this->assertFalse($result);
         MonkeyFunctions\expect('wp_refresh_post_nonces')
             ->once()
             ->with($customResponse, $customData, $customScreenId)
             ->andReturn([]);
-        $result = $wpNonce->refreshPostNonces($customResponse, $customData, $customScreenId);
+        $result = $wpNonce->refreshPostNonces(
+            $customResponse, $customData, $customScreenId
+        );
         $this->assertEquals([], $result);
     }
 
     /**
-     * Tests the WpNonce::signupNonceCheck method.
+     * Tests the WpNonce signupNonceCheck method.
      *
      * @covers JosepCrespo\OoWordpressNonces\WpNonce::__construct
      * @covers JosepCrespo\OoWordpressNonces\WpNonceFactory::create
      * @covers JosepCrespo\OoWordpressNonces\WpNonce::signupNonceCheck
+     * @covers JosepCrespo\OoWordpressNonces\WpNonce::setAction
+     * @covers JosepCrespo\OoWordpressNonces\WpNonce::setName
      * @return void
      */
     public function testSignupNonceCheck() {
@@ -110,11 +123,13 @@ class WpNonceTest extends TestCase {
     }
 
     /**
-     * Tests the WpNonce::signupNonceFields method.
+     * Tests the WpNonce signupNonceFields method.
      *
      * @covers JosepCrespo\OoWordpressNonces\WpNonce::__construct
      * @covers JosepCrespo\OoWordpressNonces\WpNonceFactory::create
      * @covers JosepCrespo\OoWordpressNonces\WpNonce::signupNonceFields
+     * @covers JosepCrespo\OoWordpressNonces\WpNonce::setAction
+     * @covers JosepCrespo\OoWordpressNonces\WpNonce::setName
      * @return void
      */
     public function testSignupNonceFields() {
@@ -128,7 +143,7 @@ class WpNonceTest extends TestCase {
     }
 
     /**
-     * Tests the WpNonce::tick method.
+     * Tests the WpNonce tick method.
      *
      * @covers JosepCrespo\OoWordpressNonces\WpNonce::__construct
      * @covers JosepCrespo\OoWordpressNonces\WpNonceFactory::create
@@ -146,11 +161,15 @@ class WpNonceTest extends TestCase {
     }
 
     /**
-     * Tests the WpNonce::url method.
+     * Tests the WpNonce url method.
      *
      * @covers JosepCrespo\OoWordpressNonces\WpNonce::__construct
      * @covers JosepCrespo\OoWordpressNonces\WpNonceFactory::create
      * @covers JosepCrespo\OoWordpressNonces\WpNonce::url
+     * @covers JosepCrespo\OoWordpressNonces\WpNonce::getAction
+     * @covers JosepCrespo\OoWordpressNonces\WpNonce::getName
+     * @covers JosepCrespo\OoWordpressNonces\WpNonce::setAction
+     * @covers JosepCrespo\OoWordpressNonces\WpNonce::setName
      * @return void
      */
     public function testUrl() {
@@ -169,26 +188,32 @@ class WpNonceTest extends TestCase {
     }
 
     /**
-     * Tests the WpNonce::verify method.
+     * Tests the WpNonce verify method.
      *
      * @covers JosepCrespo\OoWordpressNonces\WpNonce::__construct
      * @covers JosepCrespo\OoWordpressNonces\WpNonceFactory::create
      * @covers JosepCrespo\OoWordpressNonces\WpNonce::verify
+     * @covers JosepCrespo\OoWordpressNonces\WpNonce::getAction
+     * @covers JosepCrespo\OoWordpressNonces\WpNonce::setAction
+     * @covers JosepCrespo\OoWordpressNonces\WpNonce::setName
      * @return void
      */
     public function testVerify() {
-        $customToken = 'a_custom_token';
-        $result      = WpNonce::verify($customToken);
+        $customToken    = 'a_custom_token';
+        $wpNonceFactory = new WpNonceFactory();
+        MonkeyFunctions\expect('wp_create_nonce')->once();
+        $wpNonce = $wpNonceFactory->create();
+        $result  = $wpNonce->verify($customToken);
         $this->assertFalse($result);
         MonkeyFunctions\expect('wp_verify_nonce')
             ->once()
             ->andReturn(1);
-        $result = WpNonce::verify($customToken);
+        $result = $wpNonce->verify($customToken);
         $this->assertEquals(1, $result);
         MonkeyFunctions\expect('wp_verify_nonce')
             ->once()
             ->andReturn(2);
-        $result = WpNonce::verify($customToken);
+        $result = $wpNonce->verify($customToken);
         $this->assertEquals(2, $result);
     }
 }

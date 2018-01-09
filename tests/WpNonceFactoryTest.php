@@ -16,8 +16,10 @@ class WpNonceFactoryTest extends TestCase {
      * @covers JosepCrespo\OoWordpressNonces\WpNonceFactory::create
      * @covers JosepCrespo\OoWordpressNonces\WpNonce::__construct
      * @covers JosepCrespo\OoWordpressNonces\WpNonce::getAction
-     * @covers JosepCrespo\OoWordpressNonces\WpNonce::getNonceName
+     * @covers JosepCrespo\OoWordpressNonces\WpNonce::getName
      * @covers JosepCrespo\OoWordpressNonces\WpNonce::getToken
+     * @covers JosepCrespo\OoWordpressNonces\WpNonce::setAction
+     * @covers JosepCrespo\OoWordpressNonces\WpNonce::setName
      * @return void
      */
     public function testCreateWithDefaultParameters() {
@@ -29,10 +31,10 @@ class WpNonceFactoryTest extends TestCase {
 
         $this->assertInstanceOf(WpNonce::class, $wpNonce);
         $this->assertObjectHasAttribute('action', $wpNonce);
-        $this->assertObjectHasAttribute('nonceName', $wpNonce);
+        $this->assertObjectHasAttribute('name', $wpNonce);
         $this->assertObjectHasAttribute('token', $wpNonce);
         $this->assertSame($defaultAction, $wpNonce->getAction());
-        $this->assertSame($defaultNonceName, $wpNonce->getNonceName());
+        $this->assertSame($defaultNonceName, $wpNonce->getName());
         $this->assertSame($notSetToken, $wpNonce->getToken());
     }
 
@@ -42,8 +44,10 @@ class WpNonceFactoryTest extends TestCase {
      * @covers JosepCrespo\OoWordpressNonces\WpNonceFactory::create
      * @covers JosepCrespo\OoWordpressNonces\WpNonce::__construct
      * @covers JosepCrespo\OoWordpressNonces\WpNonce::getAction
-     * @covers JosepCrespo\OoWordpressNonces\WpNonce::getNonceName
+     * @covers JosepCrespo\OoWordpressNonces\WpNonce::getName
      * @covers JosepCrespo\OoWordpressNonces\WpNonce::getToken
+     * @covers JosepCrespo\OoWordpressNonces\WpNonce::setAction
+     * @covers JosepCrespo\OoWordpressNonces\WpNonce::setName
      * @return void
      */
     public function testCreateWithCustomParameters() {
@@ -57,7 +61,7 @@ class WpNonceFactoryTest extends TestCase {
         $wpNonce = $wpNonceFactory->create($customAction, $customNonceName);
 
         $this->assertSame($customAction, $wpNonce->getAction());
-        $this->assertSame($customNonceName, $wpNonce->getNonceName());
+        $this->assertSame($customNonceName, $wpNonce->getName());
         $this->assertSame($token, $wpNonce->getToken());
     }
 }

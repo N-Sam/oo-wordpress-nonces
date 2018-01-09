@@ -14,7 +14,7 @@ class WpNonceFactory {
      *
      * @var int DEFAULT_WP_ACTION
      */
-    private const DEFAULT_WP_ACTION = -1;
+    private const DEFAULT_WP_NONCE_ACTION = -1;
 
     /**
      * Default nonce name.
@@ -30,7 +30,7 @@ class WpNonceFactory {
      * @return WpNonce
      */
     public static function create(
-        $action    = self::DEFAULT_WP_ACTION,
+        $action    = self::DEFAULT_WP_NONCE_ACTION,
         $nonceName = self::DEFAULT_WP_NONCE_NAME
     ) {
         return new WpNonce($action, $nonceName);
