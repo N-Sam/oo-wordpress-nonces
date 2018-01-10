@@ -103,7 +103,7 @@ The *Unitary Tests* of this package has been made using [PHPUnit](https://phpuni
 
 2. Assuming that you have all the dependencies installed using *Composer*, you can run the *Unitary Tests* by simply executing the following command in the root directory of the project:
 
-`vendor/bin/phpunit tests`
+`vendor/bin/phpunit`
 
 After running the tests, you can view the tests coverage results by opening the `index.html` file created under the `tests/code-coverage-reports/html-format/` folder.
 
