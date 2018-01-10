@@ -1,4 +1,4 @@
-[![MIT license](https://img.shields.io/github/license/mashape/apistatus.svg)](http://opensource.org/licenses/MIT) [![codecov.io](https://img.shields.io/codecov/c/github/josepcrespo/oo-wordpress-nonces.svg)](https://codecov.io/github/josepcrespo/oo-wordpress-nonces)
+[![MIT license](https://img.shields.io/github/license/mashape/apistatus.svg)](http://opensource.org/licenses/MIT) [![codecov.io](https://img.shields.io/codecov/c/github/josepcrespo/oo-wordpress-nonces.svg)](https://codecov.io/github/josepcrespo/oo-wordpress-nonces) [![CircleCI](https://circleci.com/gh/josepcrespo/oo-wordpress-nonces.svg?style=shield)](https://circleci.com/gh/josepcrespo/oo-wordpress-nonces)
 
 ----------
 
