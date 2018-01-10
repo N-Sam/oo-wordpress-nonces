@@ -5,6 +5,7 @@
 Table of contents:
 
 - [OoWordpressNonces](#oowordpressnonces)
+  * [Disclaimer](#disclaimer)
   * [Introduction](#introduction)
   * [Composer Package](#composer-package)
   * [Local development](#local-development)
@@ -16,6 +17,12 @@ Table of contents:
 ----------
 
 # OoWordpressNonces
+
+## Disclaimer
+
+This is a demo project to provide an example of my skills on object oriented programming using PHP, writing PHPUnit unitary tests and, taking advantage of tools like Composer, Git, GitHub and, the Unix Shell.
+
+This project has not been wrote in any case thinking to be used in production, but can be used as you wants under your total responsability. You can also fork it and, use as a foundation for your own project if you found it useful.
 
 ## Introduction
 
