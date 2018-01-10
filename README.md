@@ -20,13 +20,13 @@ Table of contents:
 
 ## Disclaimer
 
-This is a demo project to provide an example of my skills on object oriented programming using PHP, writing PHPUnit unitary tests and, taking advantage of tools like Composer, Git, GitHub and, the Unix Shell.
+This is a demo project to provide an example of my skills on object oriented programming using [PHP](http://www.php.net/), writing [PHPUnit](https://phpunit.de/) unitary tests and, taking advantage of tools like [Composer](https://getcomposer.org/), [Git](https://git-scm.com/), [GitHub](https://github.com/) and, the [Unix Shell](https://en.wikipedia.org/wiki/Unix_shell).
 
 This project has not been wrote in any case thinking to be used in production, but can be used as you wants under your total responsability. You can also fork it and, use as a foundation for your own project if you found it useful.
 
 ## Introduction
 
-**OoWordpressNonces** is a [Composer](https://getcomposer.org/) package for [WordPress](https://wordpress.org/) to deal with *WordPress Nonces* using an *Object Oriented Programming* approach.
+**OoWordpressNonces** is a *Composer* package for [WordPress](https://wordpress.org/) to deal with *WordPress Nonces* using an *Object Oriented Programming* approach.
 
 It does not replaces the original [WordPress Nonces](https://codex.wordpress.org/WordPress_Nonces) system, this package is only a wrapper, using an *OOP* approach, to the original *WordPress Nonces* functions.
 
@@ -62,7 +62,9 @@ In this section, you can get the instructions to setup this project on your loca
 ### Get a copy of the project
 
 Clone the project using [Git](https://git-scm.com/):
+
 `git clone https://github.com/josepcrespo/oo-wordpress-nonces.git`
+
 or, download a [ZIP](https://en.wikipedia.org/wiki/Zip_%28file_format%29) file with all the project files:
 https://github.com/josepcrespo/oo-wordpress-nonces/archive/master.zip
 
@@ -71,8 +73,7 @@ https://github.com/josepcrespo/oo-wordpress-nonces/archive/master.zip
 > **:exclamation: Before starting to install Composer:**
 > - [PHP](http://www.php.net/) installed on your system is a mandatory requirement. If your development environment runs on [macOS](https://www.apple.com/macos/), I recommend install it using [Homebrew](https://brew.sh/)
 > - Before starting to use *Homebrew* it is very recommended to have [Xcode](https://developer.apple.com/xcode/) installed and updated. You can [install/update Xcode](https://itunes.apple.com/es/app/xcode/id497799835?mt=12) using the [macOS App Store](https://www.appstore.com/). 
-> - You also need to install the [Xcode Command Line Tools](https://developer.apple.com/xcode/features/). To install/update the *Xcode Command Line Tools*, write this command using the *Terminal.app* (after having *Xcode* installed or updated):
-> `xcode-select --install`
+> - If you are using *macOS*, you also need to install the [Xcode Command Line Tools](https://developer.apple.com/xcode/features/). To install/update the *Xcode Command Line Tools*, write this command using the [Terminal.app](https://en.wikipedia.org/wiki/Terminal_(macOS)) (after having *Xcode* installed or updated): `xcode-select --install`
 
 To quickly install *Composer* in the current directory, please, refer to the [official Composer download page](https://getcomposer.org/download/) for updated instructions.
 
@@ -104,10 +105,11 @@ The *Unitary Tests* of this package has been made using [PHPUnit](https://phpuni
 
 `vendor/bin/phpunit tests`
 
-After running the tests, you can view the tests coverage results by opening the `index.html` file created under the `tests/coverage.html/` folder.
+After running the tests, you can view the tests coverage results by opening the `index.html` file created under the `tests/code-coverage-reports/html-format/` folder.
 
-> **:warning: If *PHPUnit* throws an error message saying that it can not find some *Class* used in the tests
+> **:warning: If *PHPUnit* throws an error message saying that it can not find some *Class* used in the tests.**
 > - Use the following *Composer*'s command and, then re-run the tests.
+>
 > `php composer.phar dump-autoload`
 
 > **:warning: You need Xdebug PHP extension enabled.**
