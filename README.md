@@ -42,7 +42,7 @@ You can install **OoWordpressNonces** by adding this package repository specific
     }
 }
 </code></pre>
-and then run `composer.phar update`.
+and then run `php composer.phar update`.
 
 ----------
 
@@ -81,7 +81,7 @@ You may want to look into [the official Composer guidelines for Installing Depen
 > **:warning: If you used the `--filename` option on the *Composer* installation**
 > - Maybe you installed your *Composer* using the `--filename` installer option, for example in this way:
 > `php composer-setup.php --filename=composer`
-> In that case, you should run `php composer install` in order to install the dependencies.
+> In that case, you should run `composer install` in order to install the dependencies.
 
 ----------
 
@@ -98,6 +98,10 @@ The *Unitary Tests* of this package has been made using [PHPUnit](https://phpuni
 `vendor/bin/phpunit tests`
 
 After running the tests, you can view the tests coverage results by opening the `index.html` file created under the `tests/coverage.html/` folder.
+
+> **:warning: If *PHPUnit* throws an error message saying that it can not find some *Class* used in the tests
+> - Use the following *Composer*'s command and, then re-run the tests.
+> `php composer.phar dump-autoload`
 
 > **:warning: You need Xdebug PHP extension enabled.**
 > - *PHPUnit*'s code coverage functionality is configured by default for this project. It makes use of the *PHP_CodeCoverage* component, which in turn leverages the code coverage functionality provided by the [Xdebug](https://xdebug.org/) extension for PHP.

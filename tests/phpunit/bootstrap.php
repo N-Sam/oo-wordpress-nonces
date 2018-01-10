@@ -4,7 +4,8 @@
  * A bootstrap file for PHPUnit.
  */
 
-$vendor = dirname(__DIR__) . '/vendor/';
+//$vendor = dirname(__DIR__) . '/vendor/';
+$vendor = dirname(dirname( __DIR__ )) . '/vendor/';
 
 if (!realpath($vendor)) {
     die(

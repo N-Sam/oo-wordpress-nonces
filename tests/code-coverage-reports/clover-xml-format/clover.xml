@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1515516795">
-  <project timestamp="1515516795">
+<coverage generated="1515598077">
+  <project timestamp="1515598077">
     <package name="JosepCrespo\OoWordpressNonces">
       <file name="/Users/josep/Desarrollo/OoWordpressNonces/src/WpNonce.php">
         <class name="JosepCrespo\OoWordpressNonces\WpNonce" namespace="JosepCrespo\OoWordpressNonces">

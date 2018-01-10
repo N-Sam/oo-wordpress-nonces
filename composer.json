@@ -24,7 +24,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "JosepCrespo\\OoWordpressNonces\\Tests\\": "tests/"
+            "JosepCrespo\\OoWordpressNonces\\Tests\\": "tests/phpunit/unit"
         }
     },
     "config": {
