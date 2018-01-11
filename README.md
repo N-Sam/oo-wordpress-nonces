@@ -20,9 +20,11 @@ Table of contents:
 
 ## Disclaimer
 
-This is a demo project to provide an example of my skills on object oriented programming using [PHP](http://www.php.net/), writing [PHPUnit](https://phpunit.de/) unitary tests and, taking advantage of tools like the [Unix Shell](https://en.wikipedia.org/wiki/Unix_shell), [Composer](https://getcomposer.org/) (a dependency manager for PHP) and, [Git](https://git-scm.com/) (a distributed version control system). Also reflects my knowledge of modern development platforms like [GitHub](https://github.com/) (an online source code repositories hub), [Codecov](https://codecov.io/) (for code coverage insights) and, [CircleCI](https://circleci.com/) (a continuous integration and continuous delivery platform).
+This is a demo project to provide an example of my skills on object oriented programming using [PHP](http://www.php.net/), writing [PHPUnit](https://phpunit.de/) unitary tests and, taking advantage of tools like [Composer](https://getcomposer.org/) (a dependency manager for PHP), [Git](https://git-scm.com/) (a distributed version control system) and, the [Unix Shell](https://en.wikipedia.org/wiki/Unix_shell). Also reflects my knowledge of modern development platforms like [GitHub](https://github.com/) (an online source code repositories hub), [Codecov](https://codecov.io/) (for code coverage insights) and, [CircleCI](https://circleci.com/) (a continuous integration and continuous delivery platform).
 
 This project has not been wrote in any case thinking to be used in production, but can be used as you wants under your total responsability. You can also fork it and, use as a foundation for your own project if you found it useful.
+
+----------
 
 ## Introduction
 
